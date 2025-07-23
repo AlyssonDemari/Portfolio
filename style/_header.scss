@@ -3,7 +3,8 @@
 
 
 header{
-    background: var(--header);
+    border: 2px solid blue;
+    //background: var(--header);
     width: 100%;
     @include center(row, center, center);    
 }
@@ -39,5 +40,9 @@ header{
     
     &__button{
         @include button-header();
+    }
+
+    #theme-toggle{
+        cursor: pointer;
     }
 }
