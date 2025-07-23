@@ -1,0 +1,43 @@
+@import "../style/variables";
+@import  "../style/mixin";
+
+
+header{
+    background: var(--header);
+    width: 100%;
+    @include center(row, center, center);    
+}
+.header{
+    @include center(row, center, center);
+    width: 80%;
+    height: 8rem;
+
+    &__img-logo{
+        width: 4.5rem;
+    }
+    
+    &__nav{
+        @include center(row, space-between, center);
+        border: 2px solid pink;
+        width: 100%;
+    }
+
+    &__logo{
+        border: 2px solid green;
+        @include center(row, space-between, center);
+        width: 20%;
+        font-family: font("family");
+    }
+
+    &__ul{
+        //border: 2px solid blue;
+        @include center(row, space-around);
+        width: 70%;
+        font-family: font("family");
+        
+    }
+    
+    &__button{
+        @include button-header();
+    }
+}

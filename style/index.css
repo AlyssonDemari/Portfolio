@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg: #FFFFFF;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+body.dark-mode {
+  --bg: #111827;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+body.dark-mode {
+  --bg: #111827;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+body.dark-mode {
+  --bg: #111827;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+header {
+  background: var(--header);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 80%;
+  height: 8rem;
+}
+.header__img-logo {
+  width: 4.5rem;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  border: 2px solid pink;
+  width: 100%;
+}
+.header__logo {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 20%;
+  font-family: "Roboto";
+}
+.header__ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 70%;
+  font-family: "Roboto";
+}
+.header__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 10rem;
+  height: 2.5rem;
+  position: relative;
+  background-color: transparent;
+  background-image: linear-gradient(var(--hoverButton), var(--hoverButton));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0% 100%;
+  transition: background-size 1s, letter-spacing 1s;
+  letter-spacing: 0;
+}
+.header__button::before, .header__button::after {
+  content: "";
+  position: absolute;
+  height: 0.1rem;
+  background: white;
+  transition: all 0.8s ease-in-out;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.header__button::before {
+  top: -0.2rem;
+}
+.header__button::after {
+  bottom: -0.2rem;
+}
+.header__button:hover {
+  background-size: 100% 100%;
+  letter-spacing: 0.5rem;
+}
+.header__button:hover::before, .header__button:hover::after {
+  width: 100%;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+body.dark-mode {
+  --bg: #111827;
+  --header: #263138;
+  --hoverButton: #ec3b0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+body {
+  background: var(--bg);
+}/*# sourceMappingURL=index.css.map */
