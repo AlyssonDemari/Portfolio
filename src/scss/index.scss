@@ -1,0 +1,7 @@
+@import "../scss/variables";
+@import "../scss/header";
+@import  "../scss/mixin";
+
+body{
+    background: var(--bg);
+}

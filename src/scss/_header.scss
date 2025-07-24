@@ -1,5 +1,5 @@
-@import "../style/variables";
-@import  "../style/mixin";
+@import "../scss/variables";
+@import  "../scss/mixin";
 
 
 header{
@@ -11,6 +11,7 @@ header{
     background: transparent;
     padding: 2rem;
     color: var(--headerText);
+    transition: all 1s;
 
     @media (max-width: 1074px){
         padding: 0;
@@ -30,6 +31,7 @@ header.rolagem{
     width: 80%;
     height: 6rem;
     color: var(--headerText);
+    container-type: inline-size;
 
     &__img-logo{
         width: 4.5rem;
@@ -45,10 +47,11 @@ header.rolagem{
         @include center(row, space-around);
         width: 100%;
         border: 2px solid green;
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, .5cqw, 3rem);
         font-family: font("family");
     }
 
+    
     &__ul{
         //border: 2px solid blue;
         @include center(row, space-around);
