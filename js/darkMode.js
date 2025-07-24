@@ -16,7 +16,7 @@ function updateButtonText(theme) {
 
     const logoImg = document.querySelector('.header__img-logo');
 
-  logoImg.src = theme === 'dark' ? 'assets/images/logowhite.png' : 'assets/images/logo.png';
+  logoImg.src = theme === 'dark' ? 'assets/images/logoWhite.png' : 'assets/images/logo.png';
 }
 
 // Evento de clique no botão
