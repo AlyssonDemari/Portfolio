@@ -5,15 +5,26 @@ window.addEventListener("scroll", function(){
 
 
 const hamburger = document.querySelector('#hamburger');
-const bar1 = document.querySelector('.bar1');
-const bar2 = document.querySelector('.bar2');
-const bar3 = document.querySelector('.bar3');   
+const mobileNav = document.querySelector('.header__ul-mobile');
+const bars = document.querySelectorAll('.bar1, .bar2, .bar3');
 
+// Função para ABRIR e FECHAR o menu ao clicar no ícone
 hamburger.addEventListener('click', () => {
-    bar1.classList.toggle('active');
-    bar2.classList.toggle('active');
-    bar3.classList.toggle('active');
-    
-    const mobileNav = document.querySelector('.header__ul-mobile')
-    mobileNav.classList.toggle('active')
-})
+  mobileNav.classList.toggle('active');
+  // Itera sobre as barras para adicionar/remover a classe de uma vez
+  bars.forEach(bar => bar.classList.toggle('active'));
+});
+
+// Listener para FECHAR o menu ao clicar fora dele
+document.addEventListener('click', (event) => {
+  // Verifica se a classe 'active' está presente (ou seja, se o menu está aberto)
+  const isMenuOpen = mobileNav.classList.contains('active');
+  
+  // Verifica se o alvo do clique NÃO está dentro do menu e NÃO é o próprio ícone do hamburguer
+  const isClickOutside = !mobileNav.contains(event.target) && !hamburger.contains(event.target);
+
+  if (isMenuOpen && isClickOutside) {
+    mobileNav.classList.remove('active');
+    bars.forEach(bar => bar.classList.remove('active'));
+  }
+});
