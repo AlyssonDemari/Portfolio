@@ -7,6 +7,7 @@
     text-decoration: none;
     list-style: none;
     color: inherit;
+    transition: background 1s, color .5s;
 }
 
 @mixin center($direction: row, $justify: center, $align: center, $text: center, $gap: 0) {
@@ -25,9 +26,7 @@
     height: 2.5rem;
     position: relative;
     cursor: pointer;
-    // overflow: hidden; // 1. REMOVA ESTA LINHA! Ela está cortando suas linhas.
-
-    // ... código do background ...
+    font-weight: 600;
     background-color: transparent;
     background-image: linear-gradient(var(--hoverButton), var(--hoverButton));
     background-repeat: no-repeat;
@@ -42,7 +41,7 @@
         content: "";
         position: absolute;
         height: .1rem;
-        background: white;
+        background: var(--hoverLine);
         transition: all .8s ease-in-out;
         width: 0;
         left: 50%;
@@ -62,6 +61,7 @@
     &:hover {
         background-size: 100% 100%;
         letter-spacing: .5rem;
+        color: white;
     }
 
     &:hover::before,

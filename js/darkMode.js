@@ -10,9 +10,13 @@ function applyTheme(theme) {
   updateButtonText(theme);
 }
 
-// Função para atualizar o texto do botão
+// Função para atualizar o texto do botão e logo
 function updateButtonText(theme) {
     themeToggle.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
+
+    const logoImg = document.querySelector('.header__img-logo');
+
+  logoImg.src = theme === 'dark' ? 'assets/images/logowhite.png' : 'assets/images/logo.png';
 }
 
 // Evento de clique no botão

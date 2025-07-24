@@ -24,13 +24,19 @@ $tokens: (
 
 $themes:(
     light: (
+        header-bg: linear-gradient(to bottom, #445964, #FFF ),
         bg: #FFFFFF,
         header: #263138,
+        hoverLine: #01192b,
+        headerText: #263138,
         hoverButton: #ec3b0f,
-    ),
-    dark: (
+        ),
+        dark: (
+        header-bg: linear-gradient(to bottom, #445964,  #111827 ),
         bg: #111827,
         header: #263138,
+        hoverLine: #FFF,  
+        headerText: #97a3aa,
         hoverButton: #ec3b0f,
     )
 );

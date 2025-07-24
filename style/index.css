@@ -3,38 +3,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
+  --header-bg: linear-gradient(to bottom, #445964, #FFF);
   --bg: #FFFFFF;
   --header: #263138;
+  --hoverLine: #01192b;
+  --headerText: #263138;
   --hoverButton: #ec3b0f;
 }
 
 body.dark-mode {
+  --header-bg: linear-gradient(to bottom, #445964, #111827);
   --bg: #111827;
   --header: #263138;
+  --hoverLine: #FFF;
+  --headerText: #97a3aa;
   --hoverButton: #ec3b0f;
 }
 
 :root {
+  --header-bg: linear-gradient(to bottom, #445964, #FFF);
   --bg: #FFFFFF;
   --header: #263138;
+  --hoverLine: #01192b;
+  --headerText: #263138;
   --hoverButton: #ec3b0f;
 }
 
 body.dark-mode {
+  --header-bg: linear-gradient(to bottom, #445964, #111827);
   --bg: #111827;
   --header: #263138;
+  --hoverLine: #FFF;
+  --headerText: #97a3aa;
   --hoverButton: #ec3b0f;
 }
 
 :root {
+  --header-bg: linear-gradient(to bottom, #445964, #FFF);
   --bg: #FFFFFF;
   --header: #263138;
+  --hoverLine: #01192b;
+  --headerText: #263138;
   --hoverButton: #ec3b0f;
 }
 
 body.dark-mode {
+  --header-bg: linear-gradient(to bottom, #445964, #111827);
   --bg: #111827;
   --header: #263138;
+  --hoverLine: #FFF;
+  --headerText: #97a3aa;
   --hoverButton: #ec3b0f;
 }
 
@@ -45,6 +63,7 @@ body.dark-mode {
   text-decoration: none;
   list-style: none;
   color: inherit;
+  transition: background 1s, color 0.5s;
 }
 
 header {
@@ -56,6 +75,22 @@ header {
   align-items: center;
   text-align: center;
   gap: 0;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  padding: 2rem;
+  transition: all 1s;
+  color: var(--headerText);
+}
+@media (max-width: 1074px) {
+  header {
+    padding: 0;
+  }
+}
+
+header.rolagem {
+  padding: 0;
+  background: var(--header-bg);
 }
 
 .header {
@@ -66,7 +101,8 @@ header {
   text-align: center;
   gap: 0;
   width: 80%;
-  height: 8rem;
+  height: 6rem;
+  color: var(--headerText);
 }
 .header__img-logo {
   width: 4.5rem;
@@ -81,16 +117,15 @@ header {
   border: 2px solid pink;
   width: 100%;
 }
-.header__logo {
-  border: 2px solid green;
+.header__logo-link {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   gap: 0;
-  width: 20%;
-  font-family: "Roboto";
+  width: 100%;
+  border: 2px solid green;
 }
 .header__ul {
   display: flex;
@@ -113,6 +148,7 @@ header {
   height: 2.5rem;
   position: relative;
   cursor: pointer;
+  font-weight: 600;
   background-color: transparent;
   background-image: linear-gradient(var(--hoverButton), var(--hoverButton));
   background-repeat: no-repeat;
@@ -125,7 +161,7 @@ header {
   content: "";
   position: absolute;
   height: 0.1rem;
-  background: white;
+  background: var(--hoverLine);
   transition: all 0.8s ease-in-out;
   width: 0;
   left: 50%;
@@ -141,6 +177,7 @@ header {
 .header__button:hover {
   background-size: 100% 100%;
   letter-spacing: 0.5rem;
+  color: white;
 }
 .header__button:hover::before, .header__button:hover::after {
   width: 100%;
@@ -148,16 +185,33 @@ header {
 .header #theme-toggle {
   cursor: pointer;
 }
+.header .navBurger {
+  display: none;
+}
+@media (max-width: 1074px) {
+  .header .navBurger {
+    display: flex;
+  }
+  .header__ul {
+    display: none;
+  }
+}
 
 :root {
+  --header-bg: linear-gradient(to bottom, #445964, #FFF);
   --bg: #FFFFFF;
   --header: #263138;
+  --hoverLine: #01192b;
+  --headerText: #263138;
   --hoverButton: #ec3b0f;
 }
 
 body.dark-mode {
+  --header-bg: linear-gradient(to bottom, #445964, #111827);
   --bg: #111827;
   --header: #263138;
+  --hoverLine: #FFF;
+  --headerText: #97a3aa;
   --hoverButton: #ec3b0f;
 }
 
@@ -168,6 +222,7 @@ body.dark-mode {
   text-decoration: none;
   list-style: none;
   color: inherit;
+  transition: background 1s, color 0.5s;
 }
 
 body {

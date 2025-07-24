@@ -7,11 +7,29 @@ header{
     //background: var(--header);
     width: 100%;
     @include center(row, center, center);    
+    position: sticky;
+    top: 0;
+    background: transparent;
+    padding: 2rem;
+    transition: all 1s;
+    color: var(--headerText);
+
+    @media (max-width: 1074px){
+        padding: 0;
+    }
 }
+
+header.rolagem{
+    padding: 0;
+    background: var(--header-bg);
+
+}
+
 .header{
     @include center(row, center, center);
     width: 80%;
-    height: 8rem;
+    height: 6rem;
+    color: var(--headerText);
 
     &__img-logo{
         width: 4.5rem;
@@ -23,11 +41,10 @@ header{
         width: 100%;
     }
 
-    &__logo{
-        border: 2px solid green;
-        @include center(row, space-between, center);
-        width: 20%;
-        font-family: font("family");
+    &__logo-link{
+    @include center(row, space-around);
+       width: 100%;
+       border: 2px solid green;
     }
 
     &__ul{
@@ -44,5 +61,20 @@ header{
 
     #theme-toggle{
         cursor: pointer;
+    }
+
+    .navBurger{
+        display: none;
+    }
+
+    @media (max-width: 1074px){
+
+        .navBurger{
+            display: flex;
+        }
+
+        &__ul{
+            display: none;
+        }
     }
 }
