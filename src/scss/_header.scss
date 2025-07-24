@@ -51,7 +51,7 @@ header.rolagem{
         font-family: font("family");
     }
 
-    
+
     &__ul{
         //border: 2px solid blue;
         @include center(row, space-around);
@@ -83,6 +83,30 @@ header.rolagem{
         &__ul{
             display: none;
         }
+    }
+}
+
+.header__ul-mobile{
+    @include center(column, space-around);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    background: red;
+    transition: all 1s;
+
+    &.active{
+        width: 50vw;
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    #theme-toggle-mobile{
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 

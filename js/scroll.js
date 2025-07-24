@@ -13,4 +13,7 @@ hamburger.addEventListener('click', () => {
     bar1.classList.toggle('active');
     bar2.classList.toggle('active');
     bar3.classList.toggle('active');
+    
+    const mobileNav = document.querySelector('.header__ul-mobile')
+    mobileNav.classList.toggle('active')
 })
