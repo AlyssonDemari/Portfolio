@@ -3,61 +3,62 @@
 
 
 header{
-    // border: 2px solid blue;
-    width: 100%;
+ border: 2px solid blue;
     @include center(row, center, center);    
-    position: sticky;
-    top: 0;
-    background: transparent;
-    padding: 2rem;
+    @include position(sticky, 0);
+    
+    width: sizes("full");
+    padding: sizes("large");
+    
+    background: var(--bg-trasnparent);
     color: var(--headerText);
-    transition: all 1s;
+    transition: all timing("slow");
 
     @media (max-width: 1074px){
-        padding: 0;
+        padding: sizes("none");
     }
 }
 
 // aplica o efeito de rolagem no header
 header.rolagem{
-    padding: 0;
+    padding: sizes("none");
     background: var(--header-bg);
 
 }
 
 // Estilização do header
 .header{
+    border: 2px solid pink;
     @include center(row, center, center);
-    width: 80%;
-    height: 6rem;
+    width: sizes("full") - 20%;
+    height: sizes("heightHeader");
     color: var(--headerText);
-    container-type: inline-size;
 
     &__img-logo{
-        width: 4.5rem;
+        width: sizes("logoHeader");
     }
     
     &__nav{
+        //border: 2px solid pink;
         @include center(row, space-between, center);
-        border: 2px solid pink;
-        width: 100%;
+        width: sizes("full");
     }
 
     &__logo-link{
+         border: 2px solid green;
         @include center(row, space-around);
-        width: 100%;
-        border: 2px solid green;
-        font-size: clamp(1.5rem, .5cqw, 3rem);
+        width: sizes("full");
         font-family: font("family");
+        font-size: clamp(1.5rem, .5cqw, 3rem);
     }
 
 
     &__ul{
-        //border: 2px solid blue;
+        border: 2px solid blue;
         @include center(row, space-around);
-        width: 70%;
+        width: sizes("full") - 30%;
         font-family: font("family");
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, .5cqw, 3rem);
     }
     
     &__button{
@@ -73,11 +74,11 @@ header.rolagem{
     }
 
     @media (max-width: 1074px){
-        width: 100%;
-        padding: .5rem;
+        width: sizes("full");
+        padding: sizes("small");
 
         &__logo-link{
-            font-size: 1rem;
+            font-size: font("size-sd");
         }
 
         .navBurger{
@@ -92,17 +93,15 @@ header.rolagem{
 
 .header__ul-mobile{
     @include center(column, space-around);
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position(absolute, 0, null, null, 0);
     height: 100vh;
     width: 0;
     opacity: 0;
-    background: red;
-    transition: all 1s;
+    background: var(--header-bg);
+    transition: all timing("slow");
 
     &.active{
-        width: 50vw;
+        width: sizes("full") - 50%;
         opacity: 1;
         transition: all 1s;
     }
@@ -205,4 +204,8 @@ header.rolagem{
     100%{
         transform: translateY(-15px) rotate(130deg);
     }
+}
+
+main{
+    height: 100vh;
 }
