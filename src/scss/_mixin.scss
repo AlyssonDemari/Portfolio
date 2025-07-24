@@ -19,6 +19,14 @@
     gap: $gap;
 }
 
+@mixin absolute($top:0, $left: 0, $bottom: 0, $right: 0){
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $left;
+    right: $right;
+}
+
 @mixin button-header(){
     @include center(row, center, center);
     //border: 2px solid red;

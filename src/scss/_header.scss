@@ -76,6 +76,10 @@ header.rolagem{
         width: 100%;
         padding: .5rem;
 
+        &__logo-link{
+            font-size: 1rem;
+        }
+
         .navBurger{
             display: flex;
         }
@@ -154,7 +158,6 @@ header.rolagem{
         display: flex;
     }
 }
-
 @keyframes bar1{
     50%{
         transform: translateY(10px);
@@ -171,7 +174,6 @@ header.rolagem{
         transform: translateY(10px) rotate(45deg);
     }
 }
-
 @keyframes bar2{
     50%{
         transform: scale(0.7);
@@ -188,7 +190,6 @@ header.rolagem{
         opacity: 0;
     }
 }
-
 @keyframes bar3{
     50%{
         transform: translateY(-15px);

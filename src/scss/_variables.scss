@@ -42,14 +42,6 @@ $themes:(
 );
 
 
-//color1: #263138;
-$color2: #445964;
-$color3: #ec3b0f;
-$color4: #97a3aa;
-$color5: #61686d1e;
-
-
-
 @mixin apply-theme($theme-map) {
     @each $key, $value in $theme-map {
         --#{$key}: #{$value};
