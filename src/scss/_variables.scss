@@ -18,7 +18,8 @@ $tokens: (
             "600": 1.5rem,     // 24px - Títulos de nível 3 (h3)
             "700": 1.875rem,   // 30px - Títulos de nível 2 (h2)
             "800": 2.25rem,    // 36px - Títulos de nível 1 (h1)
-            "900": 3rem       // 48px - Títulos de destaque (display)
+            "900": 3rem,       // 48px - Títulos de destaque (display)
+            "title": 5rem      
         ),
         "weight":(
             "100": 100,
@@ -96,6 +97,8 @@ $themes:(
         headerText: #263138,
 
         bg-trasnparent: trasnparent,
+        mainText: #445964,
+        spanHome: #263138,
         
         bg: #FFFFFF,
         hoverButton: #ec3b0f,
@@ -106,6 +109,8 @@ $themes:(
         headerText: #E2E8F0,
 
         bg-trasnparent: trasnparent,
+        mainText: #445964,
+        spanHome: #263138,
         
         bg: #1c262d,
         hoverButton: #ec3b0f,
