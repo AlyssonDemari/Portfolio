@@ -11,17 +11,19 @@ header{
     color: var(--headerText);
 
     width: sizes("full");
-    padding: sizes("large");
+    padding: spacing("40"); //modifiquei
     transition: padding timing("slow");
+
+    font-family: font-family("base");
     
     @media (max-width: 1100px){
-        padding: sizes("none");
+        padding: spacing("0"); //modifiquei
     }
 }
 
 // aplica o efeito de rolagem no header
 header.rolagem{
-    padding: sizes("none");
+    padding: spacing("0"); //modifiquei
 
     background: var(--header-bg);
 }
@@ -34,39 +36,32 @@ header.rolagem{
     color: var(--headerText);
 
     width: sizes("full") - 20%;
-    height: sizes("heightHeader");
+    height: spacing("96"); //modifiquei
 
     &__nav{
         //border: 2px solid pink;
         @include mixin.center(row-reverse, space-between, center);
         width: sizes("full");
     }
-
+    
     &__logo-link{
-        //border: 2px solid green;
+        // border: 2px solid green;
         @include mixin.center(row, space-around);
         width: sizes("full");
-        font-family: font("family");
-        font-size: clamp(1.5rem, .5cqw, 3rem);
     }
     &__logo-text{
-        font-family: font("family");
-        font-size: 5rem;
-        font-size: clamp(1.5rem, 1.5cqw, 3rem);
+        font-size: font-size("600");
+        font-weight: font-weight("600");
     }
     &__img-logo{
-        width: sizes("logoHeader");
+        width: spacing("64"); //modifiquei
     }
     
-
-
-
     &__ul{
         //border: 2px solid blue;
         @include mixin.center(row, space-around);
         width: sizes("full") - 30%;
-        font-family: font("family");
-        font-size: clamp(1.5rem, .5cqw, 3rem);
+        font-size: font-size("600");
     }
     
     &__button{
@@ -79,6 +74,7 @@ header.rolagem{
         cursor: pointer;
         background: transparent;
         z-index: 999;
+    
     }
 
     
@@ -98,18 +94,19 @@ header.rolagem{
             //width: 18%; 
             transform: translateX(-100%);
             @include mixin.center(column, space-around);
-            margin-top: sizes("heightHeader");;
-            opacity: 1;
-            transition: all 1s;
+            margin-top: spacing("96"); //modifiquei
+            opacity: 0;
+            transition: transform 1s, opacity 1s;
             pointer-events: none;
+            box-shadow: 29px 37px 15px -3px rgba(0,0,0,0.1);
         
         
             &.active{
                 opacity: 1;
                 transform: translateX(0%);
                 background: var(--bg);
-                font-size: 1.5rem;
                 pointer-events: auto;
+                transition: transform 1s, opacity 1s;
             }
         }
 
@@ -126,11 +123,4 @@ header.rolagem{
 
     //animação do hamburger esté em _animation.scss
 
-}
-
-
-main{
-    height: 100vh;
-    width: 100vw;
-    //border: 2px solid red;
 }
