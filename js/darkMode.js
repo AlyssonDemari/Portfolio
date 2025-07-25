@@ -1,5 +1,4 @@
 const themeToggle = document.getElementById('theme-toggle');
-const themeToggleMobile = document.getElementById('theme-toggle-mobile');
 const body = document.body;
 
 function applyTheme(theme) {
@@ -11,25 +10,17 @@ function applyTheme(theme) {
   updateButtonText(theme);
 }
 
-// Função para atualizar o texto do botão e logo
+// Função para atualizar o icon do botão e logo
 function updateButtonText(theme) {
-    themeToggle.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
-    themeToggleMobile.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
-
-    const logoImg = document.querySelector('.header__img-logo');
-
+  const iconTheme = document.querySelector('.icon-theme')
+  const logoImg = document.querySelector('.header__img-logo');
+  
+  iconTheme.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
   logoImg.src = theme === 'dark' ? 'assets/images/logoWhite.png' : 'assets/images/logo.png';
 }
 
 // Evento de clique no botão
 themeToggle.addEventListener('click', () => {
-  const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  applyTheme(newTheme);
-});
-
-// Evento de clique no botão versão mobile
-themeToggleMobile.addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   applyTheme(newTheme);

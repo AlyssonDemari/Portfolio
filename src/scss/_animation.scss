@@ -1,0 +1,60 @@
+
+@mixin bar1{
+	@keyframes bar1_ {
+		50% {
+		transform: translateY(10px);
+		}
+		100% {
+		transform: translateY(10px) rotate(45deg);
+		}
+	}
+}
+
+@keyframes bar1{
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+@keyframes bar1-rev{
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+@keyframes bar2{
+    50%{
+        transform: scale(0.7);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bar2-rev{
+    50%{
+        transform: scale(0.7);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bar3{
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(-15px) rotate(130deg);
+    }
+}
+@keyframes bar3-rev{
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(-15px) rotate(130deg);
+    }
+}

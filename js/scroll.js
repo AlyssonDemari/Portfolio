@@ -5,13 +5,13 @@ window.addEventListener("scroll", function(){
 
 
 const hamburger = document.querySelector('#hamburger');
-const mobileNav = document.querySelector('.header__ul-mobile');
+const navBar = document.querySelector('.header__ul')
 const bars = document.querySelectorAll('.bar1, .bar2, .bar3');
 
 // Abre o navBar
 hamburger.addEventListener('click', () => {
-  mobileNav.classList.toggle('active');
   bars.forEach(bar => bar.classList.toggle('active'));
+  navBar.classList.toggle('active')
 });
 
 // fecha o navBar ao clicar fora dele
