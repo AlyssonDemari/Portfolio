@@ -9,21 +9,20 @@ const navBar = document.querySelector('.header__ul')
 const bars = document.querySelectorAll('.bar1, .bar2, .bar3');
 
 // Abre o navBar
-hamburger.addEventListener('click', () => {
-  bars.forEach(bar => bar.classList.toggle('active'));
-  navBar.classList.toggle('active')
-});
+const clickHamburger = () => {
+    bars.forEach(bar => bar.classList.toggle('active'));
+    navBar.classList.toggle('active');
+}
 
-// fecha o navBar ao clicar fora dele
+hamburger.addEventListener('click', clickHamburger);
+
 document.addEventListener('click', (event) => {
-  // verifica se o navBar esta ativo
-  const isMenuOpen = mobileNav.classList.contains('active');
-  
-  // verifica se o click não foi no navBar
-  const isClickOutside = !mobileNav.contains(event.target) && !hamburger.contains(event.target);
+    // se meu click for dentro/no hamburger 
+    const clockedOut = hamburger.contains(event.target);
+    const clickedNav = navBar.contains(event.target);
 
-  if (isMenuOpen && isClickOutside) {
-    mobileNav.classList.remove('active');
-    bars.forEach(bar => bar.classList.remove('active'));
-  }
+    if(navBar.classList.contains('active') && !clickedNav && !clockedOut){
+      
+      clickHamburger();
+    }
 });

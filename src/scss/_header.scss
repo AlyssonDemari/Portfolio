@@ -2,14 +2,8 @@
 @import  "../scss/mixin";
 @import  "../scss/animation";
 
-
-body{
-    border: 5px solid yellow;
-    overflow: hidden;
-}
-
 header{
- border: 2px solid blue;
+    //border: 2px solid blue;
     @include center(row, center, center);    
     @include position(sticky, 0);
     
@@ -18,7 +12,7 @@ header{
     
     background: var(--bg-trasnparent);
     color: var(--headerText);
-    transition: all timing("slow");
+//    transition: all timing("slow");
 
     @media (max-width: 1074px){
         padding: sizes("none");
@@ -34,11 +28,12 @@ header.rolagem{
 
 // Estilização do header
 .header{
-    border: 2px solid pink;
+    //border: 2px solid pink;
     @include center(row, center, center);
     width: sizes("full") - 20%;
     height: sizes("heightHeader");
     color: var(--headerText);
+                transition: all 1s;
 
     &__img-logo{
         width: sizes("logoHeader");
@@ -46,12 +41,12 @@ header.rolagem{
     
     &__nav{
         //border: 2px solid pink;
-        @include center(row, space-between, center);
+        @include center(row-reverse, space-between, center);
         width: sizes("full");
     }
 
     &__logo-link{
-         border: 2px solid green;
+        //border: 2px solid green;
         @include center(row, space-around);
         width: sizes("full");
         font-family: font("family");
@@ -60,7 +55,7 @@ header.rolagem{
 
 
     &__ul{
-        border: 2px solid blue;
+        //border: 2px solid blue;
         @include center(row, space-around);
         width: sizes("full") - 30%;
         font-family: font("family");
@@ -72,12 +67,8 @@ header.rolagem{
     }
 
     #theme-toggle{
-        // position: absolute;
-        // top: 50%;
-        // right: 3%;
-        // transform: translate(-50%, -50%);
         padding: 1rem;
-        // border: none;
+        border: none;
         cursor: pointer;
         background: transparent;
         z-index: 999;
@@ -88,26 +79,25 @@ header.rolagem{
     @media (max-width: 1100px){
         width: 100%;
 
-
         &__ul{
             height: 100vh;
             position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
             width: 18%; //mudar para 0
             @include center(column, space-around);
             margin-top: sizes("heightHeader");;
             font-size: 1;
-            opacity: 1;
+            opacity: 0;
             transition: width 1s, opacity 1s;
             pointer-events: none;
+        
         
             &.active{
                 opacity: 1;
                 visibility: 1;
                 width: 50%;
-                background: red;
-                z-index: 0;
+                background: var(--bg);
                 font-size: 1.5rem;
                 pointer-events: auto;
             }
@@ -116,13 +106,11 @@ header.rolagem{
         #theme-toggle{
             position: absolute;
             top: 0%;
-            left: 0%;
-            // transform: translate(-50%, -50%);
+            right: 0%;
             padding: 1rem;
-            // border: none;
+            border: none;
             cursor: pointer;
             background: transparent;
-            z-index: 999;
         }
     }
 
@@ -134,7 +122,7 @@ header.rolagem{
     cursor: pointer;
     display: none;
     padding: 1rem;
-    border: 2px solid pink;
+    //border: 2px solid pink;
     background: transparent;
 
     .bar{
@@ -170,11 +158,12 @@ header.rolagem{
         animation: bar3 1s ease forwards;
     }
 
-    @media (max-width: 1074px){
+    @media (max-width: 1100px){
         display: flex;
     }
 }
 main{
     height: 100vh;
     width: 100vw;
+    //border: 2px solid red;
 }
