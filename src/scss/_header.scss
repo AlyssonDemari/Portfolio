@@ -3,6 +3,10 @@
 @import  "../scss/animation";
 
 
+body{
+    border: 5px solid yellow;
+}
+
 header{
  border: 2px solid blue;
     @include center(row, center, center);    
