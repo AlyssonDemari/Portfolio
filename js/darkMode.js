@@ -16,6 +16,7 @@ function updateButtonText(theme) {
   const logoImg = document.querySelector('.header__img-logo');
   
   iconTheme.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
+  iconTheme.alt = theme === 'dark' ? 'ícone de sol' : 'ícone de lua';
   logoImg.src = theme === 'dark' ? 'assets/images/logoWhite.png' : 'assets/images/logo.png';
 }
 
