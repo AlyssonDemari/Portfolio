@@ -1,16 +1,53 @@
+@use "../scss/variables";
+@use "../scss/mixin";
 
-@mixin bar1{
-	@keyframes bar1_ {
-		50% {
-		transform: translateY(10px);
-		}
-		100% {
-		transform: translateY(10px) rotate(45deg);
-		}
-	}
-}
+// Menu Burger
+.hamburger{
+    @include mixin.center(column, center, center, center, .5rem);
+    cursor: pointer;
+    display: none;
+    padding: 1rem;
+    border: none;
+    background: transparent;
 
-@keyframes bar1{
+    .bar{
+        width: 4rem;
+        height: .3rem;
+        background-color: var(--headerText);
+        transition: all 1s;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+    }
+
+    .bar1{
+        animation: bar1-rev 1s ease reverse forwards;
+    }
+
+    .bar1.active{
+        animation: bar1 1s ease forwards;
+    }
+
+    .bar2{
+        animation: bar2-rev 1s ease reverse forwards;
+    }
+
+    .bar2.active{
+        animation: bar2 1s ease forwards;
+    }
+
+    .bar3{
+        animation: bar3-rev 1s ease reverse forwards;
+    }
+
+    .bar3.active{
+        animation: bar3 1s ease forwards;
+    }
+
+    @media (max-width: 1100px){
+        display: flex;
+    }
+
+    @keyframes bar1{
     50%{
         transform: translateY(10px);
     }
@@ -18,43 +55,44 @@
         transform: translateY(10px) rotate(45deg);
     }
 }
-@keyframes bar1-rev{
-    50%{
-        transform: translateY(10px);
+    @keyframes bar1-rev{
+        50%{
+            transform: translateY(10px);
+        }
+        100%{
+            transform: translateY(10px) rotate(45deg);
+        }
     }
-    100%{
-        transform: translateY(10px) rotate(45deg);
+    @keyframes bar2{
+        50%{
+            transform: scale(0.7);
+        }
+        100%{
+            opacity: 0;
+        }
     }
-}
-@keyframes bar2{
-    50%{
-        transform: scale(0.7);
+    @keyframes bar2-rev{
+        50%{
+            transform: scale(0.7);
+        }
+        100%{
+            opacity: 0;
+        }
     }
-    100%{
-        opacity: 0;
+    @keyframes bar3{
+        50%{
+            transform: translateY(-15px);
+        }
+        100%{
+            transform: translateY(-15px) rotate(130deg);
+        }
     }
-}
-@keyframes bar2-rev{
-    50%{
-        transform: scale(0.7);
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes bar3{
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(-15px) rotate(130deg);
-    }
-}
-@keyframes bar3-rev{
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(-15px) rotate(130deg);
+    @keyframes bar3-rev{
+        50%{
+            transform: translateY(-15px);
+        }
+        100%{
+            transform: translateY(-15px) rotate(130deg);
+        }
     }
 }
