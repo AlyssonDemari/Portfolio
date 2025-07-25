@@ -32,7 +32,6 @@ header.rolagem{
 .header{
     //border: 2px solid pink;
     @include mixin.center(row, center, center);
-
     color: var(--headerText);
 
     width: sizes("full") - 20%;
@@ -63,13 +62,12 @@ header.rolagem{
         width: sizes("full") - 30%;
         font-size: font-size("600");
 
-        @media (max-width: 1340px) {
+        @media (min-width: 1100px) and (max-width: 1340px) {
             li:nth-child(6),
             li:nth-child(2),
             li:nth-child(3){
                 display: none
             }
-
         }
     }
     
