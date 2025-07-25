@@ -5,6 +5,7 @@
 
 body{
     border: 5px solid yellow;
+    overflow: hidden;
 }
 
 header{
@@ -97,8 +98,9 @@ header.rolagem{
             @include center(column, space-around);
             margin-top: sizes("heightHeader");;
             font-size: 1;
-            opacity: 0;
+            opacity: 1;
             transition: width 1s, opacity 1s;
+            pointer-events: none;
         
             &.active{
                 opacity: 1;
@@ -107,6 +109,7 @@ header.rolagem{
                 background: red;
                 z-index: 0;
                 font-size: 1.5rem;
+                pointer-events: auto;
             }
         }
 
