@@ -6,7 +6,7 @@
 main{
 	//background: rgba(124, 124, 124, 0.068);
 
-	border: 2px solid green;
+	// border: 2px solid green;
 	width: sizes("fu");
 	@include mixin.center();
 	font-family: font-family("base");
@@ -15,14 +15,14 @@ main{
 
 	.home{
 		@include mixin.center(row, space-around);
-		border: 2px solid rgb(255, 251, 0);
+		// border: 2px solid rgb(255, 251, 0);
 		width: sizes("full") - 20%;
 		height: sizes("fullVH") - 20vh;
 
 
 		&__details{
 			@include mixin.center(column, space-around, flex-start, center, 2rem);
-			border: 2px solid red;
+			// border: 2px solid red;
 			width: sizes("half");
 			font-family: font-family("base");
 			z-index: 1;
@@ -34,7 +34,7 @@ main{
 		}
 		
 		&__title{
-			border: 2px solid rgb(174, 0, 255);
+			// border: 2px solid rgb(174, 0, 255);
 			width: 100%;
 			color: var(--mainText);
 			font-size: font-size("title");
@@ -42,14 +42,17 @@ main{
 			text-align: left;
 			text-transform: uppercase;
 
-			@media (max-width: 1550px){
+			@media(max-width: 1550px){
 				font-size: font-size("900");
+			}
+			@media (max-width: 900px){
+				font-size: font-size("700");
 			}
 		}
 
 		&__span{
 			// text-align: flex-start;
-			border: 2px solid green;
+			// border: 2px solid green;
 			color: var(--spanHome);
 			font-size: font-size("700");
 			font-weight: font-weight("500");
@@ -65,7 +68,7 @@ main{
 
 		&__networks{
 			@include mixin.center(null, nul, null, null, 2rem);
-			border: 2px solid purple;
+			// border: 2px solid purple;
 			font-size: font-size("900");
 		}
 
@@ -88,29 +91,25 @@ main{
 			&__details{
 				@include mixin.center(column, center, center, center, 2rem);
 
-				background: pink;
+				background: rgba(34, 34, 34, 0.322);
 				width: 60%;
 				border-radius: 2rem;
+				padding: 2rem;
 			}
 
 			&__me{
-					@include mixin.center(column, flex-start, center);
-					width: 100%;
+				@include mixin.center(column, flex-start, center);
+				width: 100%;
 			}
 					
 			&__title{
-				border: 2px solid rgb(174, 0, 255);
+				// border: 2px solid rgb(174, 0, 255);
 				width: 100%;
-				color: var(--mainText);
-				font-size: font-size("900");
-				font-weight: font-weight("600");
-				text-transform: uppercase;
-				
 				text-align: center;
 			}
 
 			&__span{
-				border: 2px solid green;
+				// border: 2px solid green;
 				color: var(--spanHome);
 				font-weight: font-weight("500");
 				
@@ -127,6 +126,16 @@ main{
 				position: absolute;
 				top: spacing("96");
 				z-index: 0;
+			}
+		}
+
+		@media (max-width: 700px){
+			width: 100%;
+
+			&__details{
+				width: 100%;
+				
+				background: transparent;
 			}
 		}
 	}
