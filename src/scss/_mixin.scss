@@ -1,5 +1,6 @@
 @import "../scss/variables";
 
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@
     list-style: none;
     color: inherit;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 
     // transition: background 1s;
 }
@@ -80,4 +82,22 @@
     }
 }
 
+@mixin button-home(){
+    display: inline-block;
+    background: var(--mainText);
+    color: var(--bg);
+    padding: .9rem 3rem;
+    border-radius: 2rem; /* Cantos de tecla */
+    font-weight: font-weight("600");
+    font-size: font-size("400");
+    border-bottom: .2rem solid grey; /* Sombra 3D da tecla */
+    transition: transform 0.1s ease, border-bottom 0.1s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-.1rem); /* Levanta um pouco ao passar o mouse */
+        border-bottom-width: .4rem;
+        background: var(--hoverButton);
+    }
+}
 

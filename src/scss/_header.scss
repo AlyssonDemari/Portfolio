@@ -9,13 +9,15 @@ header{
     
     background: var(--bg-trasnparent);
     color: var(--headerText);
-
+    
     width: sizes("full");
     padding: spacing("40"); //modifiquei
-    transition: padding timing("slow");
-
+    transition: padding timing("medium");
+    
     font-family: font-family("base");
     
+    z-index: 10;
+
     @media (max-width: 1100px){
         padding: spacing("0"); //modifiquei
     }

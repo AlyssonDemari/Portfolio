@@ -36,7 +36,7 @@ $tokens: (
     "timing": (
         "fast": 0.5s,
         "medium": 1s,
-        "slow": 1s,
+        "slow": 10s, //usando no home__img 
         "slow-to-fast": cubic-bezier(1, 0.46, 0.45, 0.94),
     ),
     "sizes": (
@@ -44,6 +44,7 @@ $tokens: (
         "half": 50%,
         "fullVH": 100vh,
         "fullVW": 100vw,
+        "radius-sm": 1rem,
     ),
     "spacing": (
         "0": 0,
@@ -60,7 +61,11 @@ $tokens: (
         "80": 5rem,     // 80px
         "96": 6rem      // 96px
     ),
-);
+    "scale":(
+        "scale-sm": .9,
+        "scale-md": 1.2,
+        "scale-lg": 1.5,
+    ));
 
 // Sugestão para melhoria
 // @function token($group, $key) {
@@ -89,6 +94,9 @@ $tokens: (
 @function spacing($key) {
   @return map-get(map-get($tokens, "spacing"), $key);
 }
+@function scale($key) {
+  @return map-get(map-get($tokens, "scale"), $key);
+}
 
 $themes:(
     light: (
@@ -109,11 +117,11 @@ $themes:(
         headerText: #E2E8F0,
 
         bg-trasnparent: trasnparent,
-        mainText: #445964,
-        spanHome: #263138,
+        mainText: #E0E0E0,
+        spanHome: #AAAAAA,
         
         bg: #1c262d,
-        hoverButton: #ec3b0f,
+        hoverButton: #FF8C00,
     )
 );
 
