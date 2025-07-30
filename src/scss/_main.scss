@@ -2,20 +2,33 @@
 @use "../scss/mixin";
 @use "../scss/animation";
 
+@mixin charts($size: 3rem, $color: #000, $dashoffset: 505, $dasharray: 505){
+  fill: none;
+  stroke: $color;
+  stroke-width: $size;
+  stroke-dashoffset: $dashoffset;
+  stroke-dasharray: $dasharray;
+  stroke-linecap: round;
+  animation: fillIn 1s linear forwards;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
 
 main{
 	//background: rgba(124, 124, 124, 0.068);
 
 	border: 2px solid green;
-	@include mixin.center(column);
+	@include mixin.center(column, center, center, center, 3rem);
 	width: sizes("full");
 	font-family: font-family("base");
-	color: var(--mainText)
+	color: var(--mainText);
+
+	margin-bottom: 5rem;
 }
 
 .home{
 	@include mixin.center(row, space-around);
-	// border: 2px solid rgb(255, 251, 0);
+	border: 2px solid rgb(255, 251, 0);
 	width: sizes("full") - 20%;
 	height: sizes("fullVH") - 20vh;
 
@@ -38,7 +51,7 @@ main{
 		width: 100%;
 		color: var(--mainText);
 		font-size: font-size("title");
-		font-weight: font-weight("600");
+		font-weight: font-weight("700");
 		text-align: left;
 		text-transform: uppercase;
 
@@ -142,7 +155,49 @@ main{
 
 .skills{
 	border: 2px solid red;
-	height: 50vh;
+	width: 80%;
+		@include mixin.center(column, center, center, center, 3rem);
+
+	&__about{
+		border: 2px solid blue;
+		@include mixin.center(column);
+	}
+
+	&__img{
+		width: 10%;
+	}
+
+	&__title{
+		font-size: clamp(2.5rem, 5vw, 4rem)
+	}
+
+	&__subtitle{
+		font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+		width: 70%;
+		line-height: 2.5rem;
+		font-weight: 500;
+	}
+
+	&__hard{
+		// background: red;
+		width: 100%;
+		height: 20vh;
+	}
+
+	svg{
+      //border: 2px solid blue;
+      height: 100%;
+      width: 100%;
+    }
+
+	.chart__bar{
+		stroke: red;
+		stroke-width: 1rem;
+		stroke-dashoffset: 505;
+		stroke-dasharray: 505;
+		stroke-linecap: round;
+
+	}
 }
 
 
@@ -151,3 +206,4 @@ main{
 	width: 100%;
 	border: 2px solid red;
 }
+

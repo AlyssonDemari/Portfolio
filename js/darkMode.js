@@ -13,11 +13,15 @@ function applyTheme(theme) {
 // Função para atualizar o icon do botão e logo
 function updateButtonText(theme) {
   const iconTheme = document.querySelector('.icon-theme')
-  const logoImg = document.querySelector('.header__img-logo');
+  const logoImgs = document.querySelectorAll('.logo');
   
-  iconTheme.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.svg';
+  iconTheme.src = theme === 'dark' ? 'assets/images/icon-sun.svg' : 'assets/images/icon-moon.png';
+  
+  logoImgs.forEach(logo => {
+    logo.src = theme === 'dark' ? 'assets/images/logoWhite.png' : 'assets/images/logo.png';
+  });
+  
   iconTheme.alt = theme === 'dark' ? 'ícone de sol' : 'ícone de lua';
-  logoImg.src = theme === 'dark' ? 'assets/images/logoWhite.png' : 'assets/images/logo.png';
 }
 
 // Evento de clique no botão
