@@ -50,16 +50,13 @@ main{
 		// border: 2px solid rgb(174, 0, 255);
 		width: 100%;
 		color: var(--mainText);
-		font-size: font-size("title");
+		font-size: clamp(2.5rem, 5vw, 6rem);
 		font-weight: font-weight("700");
 		text-align: left;
 		text-transform: uppercase;
 
 		@media(max-width: 1550px){
-			font-size: font-size("900");
-		}
-		@media (max-width: 900px){
-			font-size: font-size("700");
+			font-size: clamp(2.5rem, 5vw, 6rem);
 		}
 	}
 
@@ -117,8 +114,10 @@ main{
 				
 		&__title{
 			// border: 2px solid rgb(174, 0, 255);
+			// font size não é mudado aqui 
 			width: 100%;
 			text-align: center;
+			transition: font-size 1s;
 		}
 
 		&__span{
@@ -171,7 +170,11 @@ main{
 
 	//modifica o __hard tbm
 	&__title{
-		font-size: clamp(2.5rem, 5vw, 4rem)
+		font-size: clamp(2.5rem, 5vw, 4rem);
+	}
+
+	span{
+		color: var(--spanHome);
 	}
 
 	&__subtitle{

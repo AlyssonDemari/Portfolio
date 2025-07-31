@@ -1,49 +1,59 @@
-function animarGrafico(){
-	const chart = document.querySelectorAll('.skills__chart');
 
 
-	chart.forEach(chart => {
-		const circle = chart.querySelector('.skills__bar');
+	// function animarGrafico(){
+	// 	const chart = document.querySelectorAll('.skills__chart');
 
-		const radius = circle.r.baseVal.value;
-		const circumference = 2 * Math.PI * radius; 
-		const percent = chart.dataset.percent;
 
-		circle.style.strokeDasharray = circumference;
-        circle.style.strokeDashoffset = circumference;
+	// 	chart.forEach(chart => {
+	// 		const circle = chart.querySelector('.skills__bar');
 
-		setTimeout(() => {
-            const offset = circumference - (percent / 100) * circumference;
-            circle.style.strokeDashoffset = offset;
-        }, 3000);
-	})
-};
+	// 		const radius = circle.r.baseVal.value;
+	// 		const circumference = 2 * Math.PI * radius; 
+	// 		const percent = chart.dataset.percent;
 
-async function carregarDados(){
-	const response = await fetch('src/json/charts.json');
-	const dados = await response.json();
-	const chartsContainer = document.querySelector('.skills__charts');
+	// 		circle.style.strokeDasharray = circumference;
+	// 		circle.style.strokeDashoffset = circumference;
 
-	chartsContainer.innerHTML = '';
+	// 		setTimeout(() => {
+	// 			const offset = circumference - (percent / 100) * circumference;
+	// 			circle.style.strokeDashoffset = offset;
+	// 		}, 3000);
+	// 	})
+	// };
 
-	dados.forEach(chartData => {
-		const chartHTML = `
-                <div class="skills__chart" data-percent="${chartData.percent}">
-                    <svg class="skills__circle">
-                        <circle class="skills__bg" cx="50%" cy="50%" r="75"></circle>
-                        <circle class="skills__bar" cx="50%" cy="50%" r="75"></circle>
-                    </svg>
-                    <div class="skills__porcent">
-                        ${chartData.title}
-                    </div>
-                </div>`;
+	// async function carregarDados(){
+	// 	try{
+	// 		const response = await fetch('src/json/charts.json');
+	// 		const dados = await response.json();
+	// 		const chartsContainer = document.querySelector('.skills__charts');
 
-		chartsContainer.insertAdjacentHTML('beforeend', chartHTML);
+	// 		chartsContainer.innerHTML = '';
 
-		animarGrafico();
-	});
-};
+	// 		dados.forEach(chartData => {
+	// 			const chartHTML = `
+	// 					<div class="skills__chart" data-percent="${chartData.percent}">
+	// 						<svg class="skills__circle">
+	// 							<circle class="skills__bg" cx="50%" cy="50%" r="75"></circle>
+	// 							<circle class="skills__bar" cx="50%" cy="50%" r="75"></circle>
+	// 						</svg>
+	// 						<div class="skills__porcent">
+	// 							${chartData.title}
+	// 						</div>
+	// 					</div>`;
 
-document.addEventListener("DOMContentLoaded", () => {
-    carregarDados();
-});
+	// 			chartsContainer.insertAdjacentHTML('beforeend', chartHTML);
+
+	// 		});
+	// 		animarGrafico();
+	// 	} catch (error) {
+	// 		alert('Erro ao carregar a Hard Skills')
+	// 	}
+	// };
+
+	// export function initCharts(){
+	// 	carregarDados()
+	// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+// 	carregarDados();
+// });
