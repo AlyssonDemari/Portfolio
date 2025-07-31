@@ -45,6 +45,7 @@ $tokens: (
         "fullVH": 100vh,
         "fullVW": 100vw,
         "radius-sm": 1rem,
+        "chart": 20rem,
     ),
     "spacing": (
         "0": 0,
@@ -62,6 +63,7 @@ $tokens: (
         "96": 6rem      // 96px
     ),
     "scale":(
+        "scale-xsm": .7,
         "scale-sm": .9,
         "scale-md": 1.2,
         "scale-lg": 1.5,
@@ -104,10 +106,12 @@ $themes:(
         hoverLine: #000000,
         headerText: #263138,
 
-        bg-trasnparent: trasnparent,
+        bg-trasnparent: trasparent,
         mainText: #445964,
         spanHome: #263138,
         cardHome: rgba(34, 34, 34, 0.322),
+        bgChart: #aaaaaa2c,
+        barChart: #ec3b0f,
         
         bg: #FFFFFF,
         hoverButton: #ec3b0f,
@@ -121,6 +125,8 @@ $themes:(
         mainText: #E0E0E0,
         spanHome: #AAAAAA,
         cardHome: rgba(107, 107, 107, 0.322),
+        bgChart: #aaaaaa2c,
+        barChart: #ec3b0f,
         
         bg: #1c262d,
         hoverButton: #FF8C00,

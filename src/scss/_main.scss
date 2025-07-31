@@ -17,7 +17,7 @@
 main{
 	//background: rgba(124, 124, 124, 0.068);
 
-	border: 2px solid green;
+	// border: 2px solid green;
 	@include mixin.center(column, center, center, center, 3rem);
 	width: sizes("full");
 	font-family: font-family("base");
@@ -28,7 +28,7 @@ main{
 
 .home{
 	@include mixin.center(row, space-around);
-	border: 2px solid rgb(255, 251, 0);
+	// border: 2px solid rgb(255, 251, 0);
 	width: sizes("full") - 20%;
 	height: sizes("fullVH") - 20vh;
 
@@ -97,7 +97,7 @@ main{
 		z-index: 0;
 	}
 
-
+	//Tamanho para tablets
 	@media (max-width: 1100px){
 		@include mixin.center(column-reverse, space-around);
 
@@ -142,6 +142,7 @@ main{
 		}
 	}
 
+	//Tamanho para smartphones
 	@media (max-width: 700px){
 		width: 100%;
 
@@ -154,49 +155,110 @@ main{
 }
 
 .skills{
-	border: 2px solid red;
-	width: 80%;
-		@include mixin.center(column, center, center, center, 3rem);
+	// border: 2px solid red;
+	// width: 80%;
+	width: sizes("full") - 20%;
+	@include mixin.center(column, center, center, center, 3rem);
 
 	&__about{
-		border: 2px solid blue;
+		// border: 2px solid blue;
 		@include mixin.center(column);
 	}
 
 	&__img{
-		width: 10%;
+		width: sizes("full") - 90%;
 	}
 
+	//modifica o __hard tbm
 	&__title{
 		font-size: clamp(2.5rem, 5vw, 4rem)
 	}
 
 	&__subtitle{
 		font-size: clamp(1.2rem, 1.5vw, 1.8rem);
-		width: 70%;
+		width: sizes("full") - 30%;
+		font-weight: font-weight("500");
+		// border: 2px solid pink;
+		
 		line-height: 2.5rem;
-		font-weight: 500;
 	}
+
+	//svg
 
 	&__hard{
-		// background: red;
-		width: 100%;
-		height: 20vh;
+		// border: 2px solid green;
+		width: sizes("full");
 	}
 
-	svg{
-      //border: 2px solid blue;
-      height: 100%;
-      width: 100%;
-    }
+	&__charts{
+		@include mixin.center(row, center, center, center);
+		flex-wrap: wrap;
+		// border: 2px solid green;
+	}
+	
+	&__chart{
+		position: relative;
+		width: sizes("chart");
+		height: sizes("chart");
+		// border: 2px solid red;
+	}
 
-	.chart__bar{
-		stroke: red;
-		stroke-width: 1rem;
-		stroke-dashoffset: 505;
-		stroke-dasharray: 505;
+	&__circle{
+		height: sizes("full");
+	}
+
+	&__bar, &__bg{
+		fill: transparent;
+		transition: stroke-dashoffset 2s ease-out;
+
+		stroke-width: 1.5rem;
+		transform-origin: 50% 50%;
 		stroke-linecap: round;
+		transform: rotate(-90deg);
+	}
 
+	&__bar {
+		stroke: var(--barChart);
+	}
+
+	&__bg {
+		stroke: var(--bgChart);
+	}
+
+	&__porcent{
+		@include mixin.position(absolute, 50%, null, null, 50%);
+		font-size: font-size("600");
+		font-weight: font-weight("600");
+
+		transform: translate(-50%, -50%);
+	}
+
+	@media (max-width: 1100px){
+
+		&__circle{
+			width: 100%;
+		}
+
+		&__chart{
+			width: 10rem;
+			height: 10rem;
+		}
+		&__bar, &__bg {
+			scale: scale("scale-xsm");
+		}
+
+		&__porcent{
+			font-size: clamp(1rem, 1vw, 1.5rem);
+		}
+	}
+
+	//Tamanho para smartphones
+	@media (max-width: 700px){
+		width: 100%;
+		
+		&__subtitle{
+			width: sizes("full") - 5%;
+		}
 	}
 }
 
