@@ -20,13 +20,13 @@
                 </div>
                 <ul class="header__ul ">
                     <button id="theme-toggle" class="header__theme-toggle" aria-label="Mudar tema">
-                        <img class="icon-theme" src="assets/images/icon-sun.svg" alt="ícone de sol">
+                        <img class="icon-theme" src="assets/images/icon-moon.png" alt="ícone de sol">
                     </button>
-                    <li class="header__button"><a href="#contato">Contato</a></li>
-                    <li class="header__button"><a href="#resumo">Resumo</a></li>
+                    <li class="header__button"><a href="#footer">Contato</a></li>
+                    <li class="header__button"><a href="#skills">Resumo</a></li>
                     <li class="header__button"><a href="#projetos">Projetos</a></li>
                     <li class="header__button"><a href="#sobre">Sobre</a></li>
-                    <li class="header__button"><a href="#home">Home</a></li>
+                    <li class="header__button"><a href="#">Home</a></li>
                 </ul>
                 <button class="hamburger" id="hamburger" aria-controls="Menu de navegação" aria-expanded="false">
                     <div class="bar bar1"></div>
@@ -47,8 +47,8 @@
                 </div>
                 <button class="home__button">Dowload Curriculo</button>
                    <div class="home__networks">
-                        <a target="_blank" href="">
-                            <i class="fa-brands fa-instagram home__icon"></i>
+                        <a target="_blank" href="https://www.tiktok.com/@beginner__dev">
+                            <i class="fa-brands fa-tiktok home__icon"></i>
                         </a>
                         <a target="_blank" href="https://github.com/AlyssonDemari">
                             <i class="fa-brands fa-github home__icon"></i>
@@ -66,7 +66,7 @@
                 <h1 class="skills__title"><span>Alysson</span> Demari</h1>
                 <p class="skills__subtitle">Sou um desenvolvedor front-end com paixão por criar interfaces intuitivas e experiências digitais impactantes. Com experiência sólida em HTML, CSS, JavaScript, e frameworks modernos como Vue.js e React, foco em transformar ideias em sites e aplicações funcionais, rápidos e visualmente atraentes.</p>
             </section>
-            <section class="skills__hard">
+            <section id="skills" class="skills__hard">
                 <h1 class="skills__title">Hard <span>Skills</span></h1>
                 <div class="skills__charts">
                     <div class="skills__chart" data-percent="90">
@@ -82,8 +82,35 @@
             </section>
         </article>
     </main>
+    <footer id="footer" class="footer">
+        <div class="footer__container">
+            <div class="layout footer__about">
+                <p class="footer__title" >SOBRE</p>
+                <p class="footer__subtitle"> Desenvolvedor Front-end apaixonado por criar interfaces bonitas e funcionais.</p>
+                <h3 class="footer__title">Tecnologias:</h3>
+                <div class="footer__tecnology">
+                    <a target="_blank" href="#"><i class="fa-brands fa-html5 footer__icon"></i></a>
+                    <a target="_blank" href="#"><i class="fa-brands fa-sass footer__icon"></i></a>
+                    <a target="_blank" href="#"><i class="fa-brands fa-js footer__icon"></i></i></a>
+                </div>
+            </div>
+            <div class="layout footer__contato">
+                <p class="footer__title">CONTATO</p>
+                <p> <i class="fa-solid fa-envelope"></i>alyssondemari@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> (55) 51 985091958</p>
+            </div>
+            <div class="layout footer__social">
+                <p class="footer__title">SIGA-ME</p>
+                <div class="footer__icons">
+                    <a target="_blank" href=""><i class="fa-brands fa-tiktok footer__icon"></i></a>
+                    <a target="_blank" href="https://github.com/AlyssonDemari"><i class="fa-brands fa-github footer__icon"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/alysson-rodrigues-demari-780b16252/"><i class="fa-brands fa-linkedin footer__icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/darkMode.js"></script>
+    <!-- <script src="js/darkMode.js"></script> -->
     <script type="module" src="js/index.js"></script>
 </body>
 </html>
