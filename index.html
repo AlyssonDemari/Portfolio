@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio | Alysson Demari</title>
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,20 +13,23 @@
         <div class="header">
             <nav class="header__nav">
                 <div class="header__logo">
-                    <a class="header__logo-link" href="https://www.linkedin.com/in/alysson-rodrigues-demari/" target="_blank">
+                    <a class="header__logo-link" rel="noopener noreferrer" href="https://www.linkedin.com/in/alysson-rodrigues-demari/" target="_blank">
                         <span class="header__logo-text">Alysson Demari</span>
-                        <img class="logo header__img-logo" src="assets/images/logo.png" alt="Logo">
+                        <img class="logo header__img-logo" src="assets/images/logo.png" alt="Logo de Alysson Demari">
                     </a>
                 </div>
                 <ul class="header__ul ">
-                    <button id="theme-toggle" class="header__theme-toggle" aria-label="Mudar tema">
-                        <img class="icon-theme" src="assets/images/icon-moon.png" alt="ícone de sol">
-                    </button>
-                    <li class="header__button"><a href="#footer">Contato</a></li>
-                    <li class="header__button"><a href="#skills">Resumo</a></li>
-                    <li class="header__button"><a href="#projetos">Projetos</a></li>
-                    <li class="header__button"><a href="#sobre">Sobre</a></li>
-                    <li class="header__button"><a href="#">Home</a></li>
+                    <!--! esta sem classe para não ter efeito hover  -->
+                    <li>
+                        <button id="theme-toggle" class="header__theme-toggle" aria-label="Mudar tema">
+                            <img class="icon-theme" src="assets/images/icon-moon.png" alt="ícone de sol">
+                        </button>
+                    </li>
+                    <li class="header__button"><a rel="noopener noreferrer" href="#footer">Contato</a></li>
+                    <li class="header__button"><a rel="noopener noreferrer" href="#skills">Resumo</a></li>
+                    <li class="header__button"><a rel="noopener noreferrer" href="#projetos">Projetos</a></li>
+                    <li class="header__button"><a rel="noopener noreferrer" href="#sobre">Sobre</a></li>
+                    <li class="header__button"><a rel="noopener noreferrer" href="#">Home</a></li>
                 </ul>
                 <button class="hamburger" id="hamburger" aria-controls="Menu de navegação" aria-expanded="false">
                     <div class="bar bar1"></div>
@@ -41,33 +44,33 @@
         <article id="home" class="home">
             <section class="home__details">
                 <div class="home__me">
-                    <span class="home__span">Olá pessoas,</span>
+                    <p class="home__span">Olá pessoas,</p>
                     <h1 class="home__title">Eu sou um programador <br>front-end</h1>
-                    <span class="home__span">Seja bem-vindo ao meu portifólio</span>
+                    <p class="home__span">Seja bem-vindo ao meu portifólio</p>
                 </div>
-                <button class="home__button">Dowload Curriculo</button>
+                <a href="assets/pdf/meu-curriculo.pdf" download class="home__button">Download Currículo</a>
                    <div class="home__networks">
-                        <a target="_blank" href="https://www.tiktok.com/@beginner__dev">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@beginner__dev" aria-label="Visitar meu perfil no TikTok">
                             <i class="fa-brands fa-tiktok home__icon"></i>
                         </a>
-                        <a target="_blank" href="https://github.com/AlyssonDemari">
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/AlyssonDemari" aria-label="Visitar meu perfil no GitHub">
                             <i class="fa-brands fa-github home__icon"></i>
                         </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/alysson-rodrigues-demari-780b16252/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alysson-rodrigues-demari-780b16252/" aria-label="Visitar meu perfil no linkedin">
                             <i class="fa-brands fa-linkedin home__icon"></i>
                         </a>
                    </div>
             </section>
-            <img class="home__img" src="assets/images/imagem-lego.png" alt="">
+            <img class="home__img" src="assets/images/imagem-lego.png" alt="Um personagem de Lego programando em um notebook">
         </article>
         <article class="skills">
             <section class="skills__about">
-                <img class="logo skills__img" src="assets/images/logo.png"> 
-                <h1 class="skills__title"><span>Alysson</span> Demari</h1>
+                <img class="logo skills__img" src="assets/images/logo.png" alt="Logo de Alysson Demari"> 
+                <h2 class="skills__title"><span>Alysson</span> Demari</h2>
                 <p class="skills__subtitle">Sou um desenvolvedor front-end com paixão por criar interfaces intuitivas e experiências digitais impactantes. Com experiência sólida em HTML, CSS, JavaScript, e frameworks modernos como Vue.js e React, foco em transformar ideias em sites e aplicações funcionais, rápidos e visualmente atraentes.</p>
             </section>
             <section id="skills" class="skills__hard">
-                <h1 class="skills__title">Hard <span>Skills</span></h1>
+                <h2 class="skills__title">Hard <span>Skills</span></h2>
                 <div class="skills__charts">
                     <div class="skills__chart" data-percent="90">
                         <svg class="skills__circle">
@@ -81,32 +84,40 @@
                 </div>
             </section>
         </article>
+
     </main>
     <footer id="footer" class="footer">
         <div class="footer__container">
-            <div class="layout footer__about">
-                <p class="footer__title" >SOBRE</p>
-                <p class="footer__subtitle"> Desenvolvedor Front-end apaixonado por criar interfaces bonitas e funcionais.</p>
-                <h3 class="footer__title">Tecnologias:</h3>
-                <div class="footer__tecnology">
-                    <a target="_blank" href="#"><i class="fa-brands fa-html5 footer__icon"></i></a>
-                    <a target="_blank" href="#"><i class="fa-brands fa-sass footer__icon"></i></a>
-                    <a target="_blank" href="#"><i class="fa-brands fa-js footer__icon"></i></i></a>
+            <div class="footer__secondCont">
+                <div class="footer__about">
+                    <h3 class="footer__title">sobre</h3>
+                    <p class="footer__subtitle">Desenvolvedor Front-end apaixonado por criar interfaces bonitas e funcionais.</p>
+                    <div class="footer-tecnology">
+                        <p class="footer__subtitle">Tecnologias</p>
+                        <a target="_blank" rel="noopener noreferrer" href="#"><i class="fa-brands fa-html5 footer__icon"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="#"><i class="fa-brands fa-sass footer__icon"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="#"><i class="fa-brands fa-js footer__icon"></i></a>
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <h3 class="footer__title">contato</h3>
+                    <div class="footer__cont-inf">
+                        <p class="footer__subtitle"> <i class="fa-solid fa-envelope"></i>alyssondemari@gmail.com</p>
+                        <p class="footer__subtitle"> <i class="fa-solid fa-phone"></i> (55) 51 985091958</p>
+                    </div>
+                </div>
+                <div class="footer__follow">
+                    <h3 class="footer__title">siga-me</h3>
+                    <div class="footer__icons">
+                        <a target="_blank" rel="noopener noreferrer" href=""><i class="fa-brands fa-tiktok footer__icon"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/AlyssonDemari"><i class="fa-brands fa-github footer__icon"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alysson-rodrigues-demari-780b16252/"><i class="fa-brands fa-linkedin footer__icon"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="layout footer__contato">
-                <p class="footer__title">CONTATO</p>
-                <p class="footer__subtitle"> <i class="fa-solid fa-envelope"></i>alyssondemari@gmail.com</p>
-                <p class="footer__subtitle"> <i class="fa-solid fa-phone"></i> (55) 51 985091958</p>
-            </div>
-            <div class="layout footer__social">
-                <p class="footer__title">SIGA-ME</p>
-                <div class="footer__icons">
-                    <a target="_blank" href=""><i class="fa-brands fa-tiktok footer__icon"></i></a>
-                    <a target="_blank" href="https://github.com/AlyssonDemari"><i class="fa-brands fa-github footer__icon"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/alysson-rodrigues-demari-780b16252/"><i class="fa-brands fa-linkedin footer__icon"></i></a>
-                </div>
-            </div>
+        </div>
+        <div class="footer__copyright">
+            Copyright 2025, Alysson Demari
         </div>
     </footer>
 

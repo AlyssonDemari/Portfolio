@@ -19,7 +19,9 @@ $tokens: (
             "700": 1.875rem,   // 30px - Títulos de nível 2 (h2)
             "800": 2.25rem,    // 36px - Títulos de nível 1 (h1)
             "900": 3rem,       // 48px - Títulos de destaque (display)
-            "title": 5rem      
+            "title": 5rem,
+            "variableTitle": clamp(2.5rem, 5vw, 4rem),      
+            "variableText": clamp(1.2rem, 1.5vw, 1.8rem),      
         ),
         "weight":(
             "100": 100,
@@ -103,7 +105,7 @@ $tokens: (
 $themes:(
     light: (
         header-bg: linear-gradient(to bottom, #445964, #FFF ),
-        footer-bg: linear-gradient(to bottom, #FFF, #445964 ),
+        footer-bg: linear-gradient(to bottom, #FFF, #445964),
         hoverLine: #000000,
         headerText: #263138,
 
@@ -114,14 +116,16 @@ $themes:(
         bgChart: #aaaaaa2c,
         barChart: #ec3b0f,
 
-        footerText: #263138,
+        footerTitle: #263138,
+        footerText: #4a5053,
+        copy: #445964,
         
         bg: #FFFFFF,
         hoverButton: #ec3b0f,
         ),
     dark: (
         header-bg: linear-gradient(to bottom, #2A3B47, #1c262d ),
-        footer-bg: linear-gradient(to bottom, #1c262d, #2A3B47 ),
+        footer-bg: linear-gradient(to bottom, #1c262d, #2A3B47),
         hoverLine: #ec3b0f,  
         headerText: #E2E8F0,
 
@@ -132,7 +136,9 @@ $themes:(
         bgChart: #aaaaaa2c,
         barChart: #ec3b0f,
 
+        footerTitle: #E0E0E0,
         footerText: #6a767c,
+        copy: #2A3B47,
         
         bg: #1c262d,
         hoverButton: #FF8C00,
