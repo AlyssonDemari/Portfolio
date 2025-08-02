@@ -21,7 +21,7 @@ $tokens: (
             "900": 3rem,       // 48px - Títulos de destaque (display)
             "title": 5rem,
             "variableTitle": clamp(2.5rem, 5vw, 4rem),      
-            "variableText": clamp(1.2rem, 1.5vw, 1.8rem),      
+            "variableText": clamp(1rem, 1.4vw, 1.8rem),      
         ),
         "weight":(
             "100": 100,
@@ -47,6 +47,7 @@ $tokens: (
         "fullVH": 100vh,
         "fullVW": 100vw,
         "radius-sm": 1rem,
+        "radius-md": 2rem,
         "chart": 20rem,
     ),
     "spacing": (

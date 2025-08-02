@@ -187,7 +187,6 @@ main{
 	}
 
 	//svg
-
 	&__hard{
 		// border: 2px solid green;
 		width: sizes("full");
@@ -268,23 +267,33 @@ main{
 
 .footer{
 	background: var(--footer-bg);
-	height: 100%;
+	height: sizes("full");
 	@include mixin.center(column, center, center);
 	font-family: font-family("base");
 
 	&__container{
 		width: sizes("half");
 		height: sizes("full");
-		@include mixin.center(row, flex-end);
+		@include mixin.center(row, center);
 	}
 
 	&__secondCont{
 		@include mixin.center(row, space-around, flex-start, center, 2rem);
 	}
 
-	&__about, &__contact, &__follow{
+	&__about{
 		width: sizes("full");
 		@include mixin.center(column, space-around, flex-start, center, 2rem);
+	}
+
+	&__contact{
+		@include mixin.center(column, center, flex-start, center, 2rem);
+		width: sizes("full");
+	}
+
+	&__follow{
+		@include mixin.center(column, space-around, flex-start, center, 2rem);
+		width: sizes("half");
 	}
 
 	&__title{
@@ -302,18 +311,16 @@ main{
 			width: 3rem;
 			height: .2rem;
 			background: var(--hoverButton);
-			position: absolute;
-			bottom: 0;
-			left: 0;
+			@include mixin.position(absolute, null, null, 0, 0);
 		}
 	}
 
 	&__subtitle{
 		color: var(--footerText);
-		font-size: 1.3rem;
+		font-size: clamp(.9rem, 1vw, 1.1rem);
 		font-weight: font-weight("500");
 		text-align: start;
-		margin-bottom: .5rem;
+		margin-bottom: sizing("8");
 	}
 
 	&__icon{
@@ -326,7 +333,7 @@ main{
 	}
 
 	.fa-solid, .fa-brands{
-		margin-right: .5rem;
+		margin-right: sizing("8");
 	}
 
 	&__copyright{
@@ -336,6 +343,36 @@ main{
 		@include mixin.center(column, center, center);
 	}
 
+	@media (max-width: 1150px){
+		
+		&__container{
+			width: sizes("full");
+			padding: spacing("32");
+		}
+	}
+
+	//Tamanho para smartphones
+	@media (max-width: 700px){
+
+		&__about{
+			display: none;
+		}
+
+		&__subtitle{
+			width: sizes("full") + 10%;
+		}
+	}
+	//Tamanho para smartphones menores
+	@media (max-width: 400px){
+
+		&__about{
+			width: sizes("full");
+		}
+
+		&__secondCont{
+			@include mixin.center(column, space-around, flex-start, center, 2rem);
+		}
+	}
 }
 
 
