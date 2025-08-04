@@ -284,7 +284,6 @@ main{
 	&__about{
 		width: sizes("full");
 		@include mixin.center(column, space-around, flex-start, center, 2rem);
-		border: 2px solid pink;
 	}
 
 	&__contact{
