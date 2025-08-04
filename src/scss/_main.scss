@@ -239,12 +239,12 @@ main{
 	@media (max-width: 1100px){
 
 		&__circle{
-			width: 100%;
+			width: sizes("full");
 		}
 
 		&__chart{
-			width: 10rem;
-			height: 10rem;
+			width: sizes("chart") / 2;
+			height: sizes("chart") / 2;
 		}
 		&__bar, &__bg {
 			scale: scale("scale-xsm");
@@ -257,7 +257,7 @@ main{
 
 	//Tamanho para smartphones
 	@media (max-width: 700px){
-		width: 100%;
+		width: sizes("full");
 		
 		&__subtitle{
 			width: sizes("full") - 5%;
@@ -276,7 +276,7 @@ main{
 		height: sizes("full");
 		@include mixin.center(row, center);
 	}
-
+	
 	&__secondCont{
 		@include mixin.center(row, space-around, flex-start, center, 2rem);
 	}
@@ -284,6 +284,7 @@ main{
 	&__about{
 		width: sizes("full");
 		@include mixin.center(column, space-around, flex-start, center, 2rem);
+		border: 2px solid pink;
 	}
 
 	&__contact{
@@ -333,7 +334,7 @@ main{
 	}
 
 	.fa-solid, .fa-brands{
-		margin-right: sizing("8");
+		margin-right: spacing("8");
 	}
 
 	&__copyright{
@@ -354,6 +355,11 @@ main{
 	//Tamanho para smartphones
 	@media (max-width: 700px){
 
+		&__secondCont{
+			@include mixin.center(row, space-around, flex-start, center, 2rem);
+			width: sizes("full");
+		}
+
 		&__about{
 			display: none;
 		}
@@ -362,15 +368,17 @@ main{
 			width: sizes("full") + 10%;
 		}
 	}
-	//Tamanho para smartphones menores
+	// Tamanho para smartphones menores
 	@media (max-width: 400px){
-
-		&__about{
-			width: sizes("full");
-		}
-
+		
+		
 		&__secondCont{
 			@include mixin.center(column, space-around, flex-start, center, 2rem);
+		}
+
+		&__contact, &__follow{
+			@include mixin.center(column, center, center, center, 2rem);
+			width: sizes("full");
 		}
 	}
 }
