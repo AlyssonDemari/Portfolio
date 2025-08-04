@@ -363,6 +363,10 @@ main{
 			display: none;
 		}
 
+		&__follow{
+			@include mixin.center(column, space-around, flex-end, center, 2rem);
+		}
+
 		&__subtitle{
 			width: sizes("full") + 10%;
 		}
