@@ -367,9 +367,14 @@ main{
 		&__subtitle{
 			width: sizes("full") + 10%;
 		}
+
+		.fa-solid, .fa-brands{
+			margin: spacing("8");
+		}
+
 	}
 	// Tamanho para smartphones menores
-	@media (max-width: 400px){
+	@media (max-width: 450px){
 		
 		
 		&__secondCont{
@@ -379,6 +384,10 @@ main{
 		&__contact, &__follow{
 			@include mixin.center(column, center, center, center, 2rem);
 			width: sizes("full");
+		}
+
+		&__icons i{
+			font-size: font-size("800");
 		}
 	}
 }
