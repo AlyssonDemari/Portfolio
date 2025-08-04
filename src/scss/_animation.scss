@@ -125,3 +125,15 @@
     transform: translateY(0) rotateY(90deg);
   }
 }
+
+// animação para progresso dos icons do minhas techs
+@keyframes progresso {
+  from {
+    /* Estado inicial: 0% de altura */
+    background-size: 100% 100%;
+  }
+  to {
+    /* Estado final: 30% de altura */
+    background-size: 100% 200%;
+  }
+}

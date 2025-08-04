@@ -21,7 +21,9 @@ $tokens: (
             "900": 3rem,       // 48px - Títulos de destaque (display)
             "title": 5rem,
             "variableTitle": clamp(2.5rem, 5vw, 4rem),      
-            "variableText": clamp(1rem, 1.4vw, 1.8rem),      
+            "variableSubTitle": clamp(1rem, 1.4vw, 1.8rem),      
+            "variableSubText": clamp(.9rem, 1vw, 1.2rem),      
+            "variable-bigIcons": clamp(5rem, 9vw, 10rem),      
         ),
         "weight":(
             "100": 100,

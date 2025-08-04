@@ -262,70 +262,48 @@ main{
 	}
 }
 
-#techs{
-	width: 100%;
-	@include mixin.center(column, center, center, center, 3rem);
-}
-
-
-.teste {
-  /* Define o gradiente que preencherá o fundo */
-  background-image: linear-gradient(to top, #445964 20%, #E0E0E0 20%);
-  
-  /* Inicializa o tamanho do fundo com 0 de altura */
-  background-size: 100% 100%;
-  
-  /* Posiciona o fundo no rodapé do elemento para a animação subir */
-  background-position: bottom;
-  
-  /* Repetição do fundo desativada */
-  background-repeat: no-repeat;
-  
-  /* Aplica a animação para aumentar o fundo */
-  animation: progresso 2s forwards;
-  
-  /* Outras propriedades */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 6rem;
-}
-.teste2 {
-  /* Define o gradiente que preencherá o fundo */
-  background-image: linear-gradient(to top, #445964 10%, #ff0000 10%);
-  
-  /* Inicializa o tamanho do fundo com 0 de altura */
-  background-size: 100% 100%;
-  
-  /* Posiciona o fundo no rodapé do elemento para a animação subir */
-  background-position: bottom;
-  
-  /* Repetição do fundo desativada */
-  background-repeat: no-repeat;
-  
-  /* Aplica a animação para aumentar o fundo */
-  animation: progresso 2s forwards;
-  
-  /* Outras propriedades */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 6rem;
-}
-
-@keyframes progresso {
-  from {
-    /* Estado inicial: 0% de altura */
-    background-size: 100% 100%;
-  }
-  to {
-    /* Estado final: 30% de altura */
-    background-size: 100% 200%;
-  }
-}
-
 .techs{
-	border: 2px solid red;
-	width: 80%;
-	height: 50vh;
+	width: sizes("full");
+	padding: spacing("64") 0;
+	@include mixin.center(column, center, center, center, 3rem);
+	background:var(--cardHome);
+	
+	&__title{
+		font-size: font-size("variableTitle");
+		margin-bottom: spacing("32");
+		
+		span{
+			color: var(--spanHome);
+		}
+	}
+	
+	&__subText{
+		font-size: font-size("variableSubText");
+		font-weight: font-weight("600");
+	}
+	
+	&__subTitle{
+		font-size: font-size("variableSubTitle");
+		font-weight: font-weight("600");
+
+		span{
+			color: var(--spanHome);
+		}
+	}
+
+	&__list{
+		@include mixin.center();
+	}
+	
+	&__icon{
+		@include mixin.iconAnimate(10%,15%);
+		margin: spacing("16");
+		cursor: pointer;
+	}
+
+	.fa-react{
+		@include mixin.iconAnimate(26%,28%);
+	}
 }
 
 .footer{
@@ -361,7 +339,7 @@ main{
 
 	&__title{
 		// border: 2px solid red;
-		font-size: font-size("variableText");
+		font-size: font-size("variableSubTitle");
 		font-weight: font-weight("600");
 		color: var(--footerTitle);
 		text-transform: uppercase;
@@ -387,7 +365,7 @@ main{
 	}
 
 	&__icon{
-		font-size: font-size("variableText");
+		font-size: font-size("variableSubTitle");
 		color: var(--footerText);
 
 		&:hover{
