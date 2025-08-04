@@ -15,9 +15,6 @@
 }
 
 main{
-	//background: rgba(124, 124, 124, 0.068);
-
-	// border: 2px solid green;
 	@include mixin.center(column, center, center, center, 3rem);
 	width: sizes("full");
 	font-family: font-family("base");
@@ -265,6 +262,72 @@ main{
 	}
 }
 
+#techs{
+	width: 100%;
+	@include mixin.center(column, center, center, center, 3rem);
+}
+
+
+.teste {
+  /* Define o gradiente que preencherá o fundo */
+  background-image: linear-gradient(to top, #445964 20%, #E0E0E0 20%);
+  
+  /* Inicializa o tamanho do fundo com 0 de altura */
+  background-size: 100% 100%;
+  
+  /* Posiciona o fundo no rodapé do elemento para a animação subir */
+  background-position: bottom;
+  
+  /* Repetição do fundo desativada */
+  background-repeat: no-repeat;
+  
+  /* Aplica a animação para aumentar o fundo */
+  animation: progresso 2s forwards;
+  
+  /* Outras propriedades */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+}
+.teste2 {
+  /* Define o gradiente que preencherá o fundo */
+  background-image: linear-gradient(to top, #445964 10%, #ff0000 10%);
+  
+  /* Inicializa o tamanho do fundo com 0 de altura */
+  background-size: 100% 100%;
+  
+  /* Posiciona o fundo no rodapé do elemento para a animação subir */
+  background-position: bottom;
+  
+  /* Repetição do fundo desativada */
+  background-repeat: no-repeat;
+  
+  /* Aplica a animação para aumentar o fundo */
+  animation: progresso 2s forwards;
+  
+  /* Outras propriedades */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+}
+
+@keyframes progresso {
+  from {
+    /* Estado inicial: 0% de altura */
+    background-size: 100% 100%;
+  }
+  to {
+    /* Estado final: 30% de altura */
+    background-size: 100% 200%;
+  }
+}
+
+.techs{
+	border: 2px solid red;
+	width: 80%;
+	height: 50vh;
+}
+
 .footer{
 	background: var(--footer-bg);
 	height: sizes("full");
@@ -393,12 +456,5 @@ main{
 			font-size: font-size("800");
 		}
 	}
-}
-
-
-#contato{
-	height: 100vh;
-	width: 100%;
-	border: 2px solid red;
 }
 
