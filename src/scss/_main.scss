@@ -278,33 +278,80 @@ main{
 		@include mixin.center(column, center, center, center);
 	}
 
-	&__search{
+	&__header{
 		border: 2px solid pink;
 		width: 70%;
 	}
 
 	&__texts{
-		@include mixin.center(row, space-around, center, center);
+		@include mixin.center(row, space-between, center, center);
+		border: 2px solid yellow;
 	}
 
 	&__title{
 		text-align: start;
 		font-size: font-size("variableTitle");
 	}
+
 	&__subTitle{
 		text-align: start;
 		font-size: font-size("variableSubTitle");
 	}
 
-	&__filter{
+	//container de button
+	&__buttons{
 		@include mixin.center(row, flex-start, center, center, 2.5rem);
-		
+		width: 100%;
+		flex-wrap: wrap;
+		padding: spacing("32") spacing("0");
+		border: 2px solid aqua;
+	}
+
+	&__button{
+		@include mixin.button-project()
 	}
 
 	&__grid{
 		border: 2px solid green;
 		width: 70%;
 		height: 60%;
+	}
+
+	@media (max-width: 1100px){
+		background: rgba(255, 192, 203, 0.418);
+		width: sizes("full");
+
+		&__container, &__header{
+			width: sizes("full");
+		}
+
+		&__texts{
+			@include mixin.center(row, space-around, center, center);
+		}
+
+		//container de button
+		&__buttons{
+			@include mixin.center(row, center, center, center, 2.5rem);
+		}
+	}
+
+	//Tamanho para smartphones
+	@media (max-width: 700px){
+		background: rgba(0, 0, 255, 0.295);
+
+		//container de button
+		&__buttons{
+			@include mixin.center(row, center, center, center, 1rem);
+		}
+	}
+
+	//Tamanho para smartphones pequenos
+	@media (max-width: 450px){
+		background: rgba(0, 255, 64, 0.295);
+
+		&__texts{
+			@include mixin.center(column, flex-start, flex-start, center);
+		}
 	}
 }
 
