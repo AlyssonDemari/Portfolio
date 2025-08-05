@@ -153,6 +153,7 @@ main{
 .skills{
 	// border: 2px solid red;
 	// width: 80%;
+	scroll-margin-top: 25vh;
 	width: sizes("full") - 20%;
 	@include mixin.center(column, center, center, center, 3rem);
 
@@ -262,11 +263,57 @@ main{
 	}
 }
 
+
+.projects{
+	scroll-margin-top: 14.5vh;
+	border: 2px solid red;
+	height: 90vh;
+	width: 100%;
+	@include mixin.center(column, center, center, center);
+
+	&__container{
+		border: 2px solid blue;
+		width: 80%;
+		height: 90%;
+		@include mixin.center(column, center, center, center);
+	}
+
+	&__search{
+		border: 2px solid pink;
+		width: 70%;
+	}
+
+	&__texts{
+		@include mixin.center(row, space-around, center, center);
+	}
+
+	&__title{
+		text-align: start;
+		font-size: font-size("variableTitle");
+	}
+	&__subTitle{
+		text-align: start;
+		font-size: font-size("variableSubTitle");
+	}
+
+	&__filter{
+		@include mixin.center(row, flex-start, center, center, 2.5rem);
+		
+	}
+
+	&__grid{
+		border: 2px solid green;
+		width: 70%;
+		height: 60%;
+	}
+}
+
+
 .techs{
 	width: sizes("full");
 	padding: spacing("64") 0;
 	@include mixin.center(column, center, center, center, 3rem);
-	background:var(--cardHome);
+	// background:var(--cardHome);
 	
 	&__title{
 		font-size: font-size("variableTitle");
