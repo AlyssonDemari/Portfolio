@@ -121,6 +121,17 @@
     height: 2rem;
     // padding: spacing("8") spacing("32");
     border-radius: 1rem;
+    transition: all .5s;
+    cursor: pointer;
+
+    &:hover, &:focus{
+        background: var(--hoverButton);
+    }
+
+    &.active{
+        background: var(--hoverButton);
+    }
 
 }
+
 
