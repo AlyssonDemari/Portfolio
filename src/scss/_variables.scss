@@ -108,6 +108,8 @@ $tokens: (
 
 $themes:(
     light: (
+        white: #FFF,
+
         header-bg: linear-gradient(to bottom, #445964, #FFF ),
         footer-bg: linear-gradient(to bottom, #FFF, #445964),
         hoverLine: #000000,
@@ -128,6 +130,8 @@ $themes:(
         hoverButton: #ec3b0f,
         ),
     dark: (
+        white: #FFF,
+
         header-bg: linear-gradient(to bottom, #2A3B47, #1c262d ),
         footer-bg: linear-gradient(to bottom, #1c262d, #2A3B47),
         hoverLine: #ec3b0f,  
