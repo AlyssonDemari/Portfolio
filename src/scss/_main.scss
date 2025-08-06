@@ -289,27 +289,46 @@ main{
 	}
 
 
-	// &__grid{
-	// 	width: 70%;
-	// 	height: 50rem;
-	// 	position: relative;
-	// 	border: 2px solid red;
-	// 	position: relative;
-	// }	
+	&__grid{
+		width: 70%;
+		height: 45rem;
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// border: 2px solid red;
+		position: relative;
+		overflow-x: auto;
 
-	// &__gridCont{
-	// 	border: 2px solid blue;
-	// 	height: 100%;
-	// 	position: absolute;
+	}	
 
-	// 	display: flex;
-	// }
+	&__gridCont{
+		display: grid;
+		// border: 2px solid blue;
+		
+		@include mixin.position(absolute, 50%, null, null, .2rem);
+		transform: translate(-0%,-50%);
 
-	// &__item{
-	// 	width: 20rem;
-	// 	height: 20rem;
-	// 	border: 2px solid pink;
-	// }
+		justify-items: center;
+		/* Configura a grade para ter 2 linhas de altura igual */
+		grid-template-rows: repeat(2, minmax(20rem, 1fr));
+		grid-auto-flow: column;
+		
+		/* Define a largura de cada coluna que é adicionada automaticamente */
+		grid-auto-columns: minmax(20rem, 1fr);
+		gap: 2rem;
+	}
+
+	&__item{
+		width: 100%;
+		height: 20rem;
+		border-radius: 1.5rem;
+		background: red;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		transition: transform 0.3s ease;
+	}
 	
 
 
@@ -344,6 +363,9 @@ main{
 	}
 
 	@media (max-width: breakpoints("smartphoneSmall")) {
+		&__container{
+			padding: spacing("16");
+		}
 
 		&__texts{
 			@include mixin.center(column, flex-start, flex-start, center);
@@ -518,73 +540,4 @@ main{
 			font-size: font-size("800");
 		}
 	}
-}
-
-// Estilização do container do grid
-// .projects__grid {
-//   display: grid;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-//   grid-gap: 0px; 
-  
-//   // Isso define o número de linhas.
-//   // Com `auto-rows`, novas linhas são criadas automaticamente conforme a necessidade.
-//   grid-template-rows: repeat($grid-rows, minmax(1fr, auto));
-// }
-
-// Estilização dos cards
-
-.projects__grid {
-    width: 70%;
-	height: 45rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	border: 2px solid red;
-	position: relative;
-	    overflow-x: auto;
-}
-
-.projects__gridCont {
-    /* Define o layout de grade */
-    display: grid;
-	border: 2px solid blue;
-	
-	position: absolute;
-	top: 50%;
-	left: .2rem;
-	transform: translate(-0%,-50%);
-
-    justify-items: center;
-    /* Configura a grade para ter 2 linhas de altura igual */
-    grid-template-rows: repeat(2, minmax(20rem, 1fr));
-    
-    /* Esta é a propriedade mágica: ela faz com que os itens se movam para a próxima coluna */
-    grid-auto-flow: column;
-    
-    /* Define a largura de cada coluna que é adicionada automaticamente */
-    grid-auto-columns: minmax(20rem, 1fr);
-    
-    /* Adiciona um espaçamento entre os itens */
-    gap: 2rem;
-    
-    /* Permite o scroll horizontal se os itens não couberem */
-    
-    /* Para uma melhor experiência do usuário, você pode esconder a barra de rolagem, mas mantê-la funcional */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.projects__item {
- width: 100%;
-    height: 100%;
-    border-radius: 1.5rem;
-    background: red;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease;
 }
