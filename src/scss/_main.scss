@@ -349,7 +349,7 @@ main{
 			filter: none;
 		}
 
-		&:hover button{
+		&:hover .item__button{
 			background: var(--hoverButton);
 			color: var(--bg);
 			transition: all timing('medium');
@@ -395,10 +395,15 @@ main{
 			font-size: font-size("300");
 		}
 
+		button{
+			border: none;
+			background: none;
+		}
+
 		&__button{
 			width: sizes("centerScreen");
 			font-size: font-size("300");
-			padding: spacing("8");
+			padding: spacing("8") spacing("32");
 			border-radius: sizes("radius-sm");
 
 			border: none;

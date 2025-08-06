@@ -1,0 +1,68 @@
+[
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-sass",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "junior",
+    "title": "Clipboard landing page",
+	"imgSrc": "assets/imagesProjetos/projeto20.jpg",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/Browser-extension-manager-UI"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "junior",
+    "title": "Jogo da Memória",
+	"imgSrc": "assets/imagesProjetos/projeto19.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/ticket"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "junior",
+    "title": "Geredor de Ticket",
+	"imgSrc": "assets/imagesProjetos/projeto18.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/Jogo-da-memoria"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "newbie",
+    "title": "Geredor de Ingresso",
+	"imgSrc": "assets/imagesProjetos/projeto17.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/Ingresso"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "newbie",
+    "title": "Adivinhe o Número",
+	"imgSrc": "assets/imagesProjetos/projeto16.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/Sorteador-de-numero"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "fa-brands fa-js",
+	"tecnology4": "",
+	"category": "newbie",
+    "title": "Jogo do Número Secreto",
+	"imgSrc": "assets/imagesProjetos/projeto15.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/Curso-Alura/aulas/codigo%202/index.html"
+  }
+]
