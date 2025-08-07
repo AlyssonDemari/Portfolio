@@ -251,6 +251,7 @@ main{
 	width: sizes("full");
 	@include mixin.center(column, center, center, center);
 	background:var(--cardHome);
+	position: relative;
 
 	&__container{
 		width: sizes("centerScreen");
@@ -289,6 +290,29 @@ main{
 		@include mixin.button-project()
 	}
 
+	&__move{
+		margin-top:spacing("16");
+		font-size: font-size("variableSubTitle");
+		width: sizes("full") - 30%;
+		@include mixin.center(row, flex-start, flex-start);
+
+		// segue o container dos itens
+		@media (max-width: 1819px) {
+			max-width: 49rem;
+		}
+		@media (max-width: 1358px) {
+			max-width: 33rem;
+		}
+	}
+
+	&__move button{
+		margin-right: spacing("16");
+		font-size: font-size("variableSubTitle");
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
 
 	//começo da estilização do grid
 	&__grid{
@@ -302,7 +326,7 @@ main{
 		overflow-x: auto;
 		box-shadow: inset -1px 9px 45px 0px rgba(0, 0, 0, 0.103);
 
-		// evita deixar os itens cortados
+		// tenta evitar deixar os itens cortados
 		@media (max-width: 1819px) {
 			max-width: 49rem;
 		}
@@ -413,6 +437,8 @@ main{
 		}
 	}
 
+
+
 	
 	@media (max-width: breakpoints("tablet")) {
 		width: sizes("full");
@@ -436,6 +462,10 @@ main{
 		//container de button
 		&__buttons{
 			@include mixin.center(row, center, center, center, 1rem);
+		}
+
+		&__move{
+			display: none;
 		}
 
 		&__grid{
@@ -472,8 +502,6 @@ main{
 				color: var(--bg);
 			}
 		}
-
-
 	}
 
 	@media (max-width: breakpoints("smartphoneSmall")) {

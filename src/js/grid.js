@@ -31,6 +31,30 @@ export function initGrid(){
     //Esta chamando a função dentro do exportItem()
 }
 
+const moveGrid = () => {
+        const containerCards = document.querySelector('.projects__grid');
+        const scrollLeftBtn = document.getElementById('scroll-left');
+        const scrollRightBtn = document.getElementById('scroll-right');
+
+        const scrollAmount = 262; // Ajuste este valor conforme necessário
+
+        scrollRightBtn.addEventListener('click', () => {
+        containerCards.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        });
+
+        scrollLeftBtn.addEventListener('click', () => {
+        containerCards.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+}
+
+
+
 async function exportItem(){
 
     try {
@@ -65,10 +89,11 @@ async function exportItem(){
         // Adiciona o HTML do item ao contêiner
         contGrid.innerHTML += htmlItem;
         exportGrid();
+        moveGrid();
     });
 
     } catch (error) {
-    alert('Erro ao carregar os projetos: ' + error.message);
+        alert('Erro ao carregar os projetos: ' + error.message);
     }
 
 }
