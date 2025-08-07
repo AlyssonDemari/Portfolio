@@ -34,7 +34,7 @@ export function initGrid(){
 async function exportItem(){
 
     try {
-    const json = await fetch('src/json/Item.json');
+    const json = await fetch('src/json/item.json');
     const itens = await json.json();
 
     const contGrid = document.querySelector('.projects__gridCont');
