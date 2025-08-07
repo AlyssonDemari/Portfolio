@@ -108,19 +108,19 @@ $tokens: (
 
 $themes:(
     light: (
-        white: #FFF,
-
+        
         header-bg: linear-gradient(to bottom, #445964, #FFF ),
         footer-bg: linear-gradient(to bottom, #FFF, #445964),
         hoverLine: #000000,
         headerText: #263138,
-
+        
         bg-trasnparent: trasparent,
         mainText: #445964,
         spanHome: #263138,
         cardHome: rgba(34, 34, 34, 0.322),
         bgChart: #aaaaaa2c,
         barChart: #ec3b0f,
+        cardItem: #FFF,
 
         footerTitle: #263138,
         footerText: #4a5053,
@@ -130,19 +130,20 @@ $themes:(
         hoverButton: #ec3b0f,
         ),
     dark: (
-        white: #FFF,
-
+        
         header-bg: linear-gradient(to bottom, #2A3B47, #1c262d ),
         footer-bg: linear-gradient(to bottom, #1c262d, #2A3B47),
         hoverLine: #ec3b0f,  
         headerText: #E2E8F0,
-
+        
         bg-trasnparent: trasnparent,
         mainText: #E0E0E0,
         spanHome: #AAAAAA,
         cardHome: rgba(107, 107, 107, 0.322),
         bgChart: #aaaaaa2c,
         barChart: #ec3b0f,
+        
+        cardItem: rgba(150, 150, 150, 0.158),
 
         footerTitle: #E0E0E0,
         footerText: #6a767c,

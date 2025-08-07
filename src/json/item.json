@@ -5,7 +5,7 @@
 	"tecnology3": "fa-brands fa-js",
 	"tecnology4": "",
 	"category": "junior",
-    "title": "Clipboard landing page",
+    "title": "Browser extension manager UI",
 	"imgSrc": "assets/imagesProjetos/projeto20.jpg",
 	"imgAlt": "Imagem do projeto",
 	"repoUrl": "https://alyssondemari.github.io/Browser-extension-manager-UI"
@@ -27,7 +27,7 @@
 	"tecnology3": "fa-brands fa-js",
 	"tecnology4": "",
 	"category": "junior",
-    "title": "Geredor de Ticket",
+    "title": "Conference ticket generator",
 	"imgSrc": "assets/imagesProjetos/projeto18.png",
 	"imgAlt": "Imagem do projeto",
 	"repoUrl": "https://alyssondemari.github.io/Jogo-da-memoria"
@@ -64,5 +64,27 @@
 	"imgSrc": "assets/imagesProjetos/projeto15.png",
 	"imgAlt": "Imagem do projeto",
 	"repoUrl": "https://alyssondemari.github.io/Curso-Alura/aulas/codigo%202/index.html"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "",
+	"tecnology4": "",
+	"category": "newbie",
+    "title": "Four card feature section",
+	"imgSrc": "assets/imagesProjetos/projeto14.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/FrontEnd-Mentor/four-card-feature-section-master/index.html"
+  },
+  {
+	"tecnology1": "fa-brands fa-html5",
+	"tecnology2": "fa-brands fa-css3",
+	"tecnology3": "",
+	"tecnology4": "",
+	"category": "newbie",
+    "title": "Huddle landing page",
+	"imgSrc": "assets/imagesProjetos/projeto13.png",
+	"imgAlt": "Imagem do projeto",
+	"repoUrl": "https://alyssondemari.github.io/FrontEnd-Mentor/four-card-feature-section-master/index.html"
   }
 ]

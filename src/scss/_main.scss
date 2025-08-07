@@ -141,7 +141,7 @@ main{
 }
 
 .skills{
-	scroll-margin-top: 20vh;
+	scroll-margin-top: 10rem;
 	width: sizes("full") - 20%;
 	@include mixin.center(column, center, center, center, 3rem);
 
@@ -247,7 +247,7 @@ main{
 }
 
 .projects{
-	scroll-margin-top: 10rem;
+	scroll-margin-top: 9rem;
 	width: sizes("full");
 	@include mixin.center(column, center, center, center);
 	background:var(--cardHome);
@@ -296,9 +296,11 @@ main{
 		width: sizes("full") - 30%;
 		max-width: 65rem;
 		height: 35rem;
+		border-radius: 1.5rem;
 
 		position: relative;
 		overflow-x: auto;
+		box-shadow: inset -1px 9px 45px 0px rgba(0, 0, 0, 0.103);
 
 		// evita deixar os itens cortados
 		@media (max-width: 1819px) {
@@ -312,7 +314,7 @@ main{
 	&__gridCont{
 		display: grid;
 		
-		@include mixin.position(absolute, 50%, null, null, .2rem);
+		@include mixin.position(absolute, 50%, null, null, .4rem);
 		transform: translate(-0%,-50%);
 
 		justify-items: center;
@@ -335,7 +337,7 @@ main{
 		height: 15rem;
 		border-radius: sizes("radius-sm");
 
-		background: var(--white);
+		background: var(--cardItem);
 		background-size: cover;
 		background-position: center;
 		transition: all timing('fast');
@@ -378,7 +380,7 @@ main{
 		}
 
 		&__language{
-			@include mixin.position(absolute, 5%, null, null, 5%)
+			@include mixin.position(absolute, 2%, null, null, 3%)
 		}
 
 		&__icon{
@@ -486,6 +488,7 @@ main{
 }
 
 .techs{
+	scroll-margin-top: 10rem;
 	width: sizes("full");
 	padding: spacing("64") 0;
 	@include mixin.center(column, center, center, center, 3rem);
